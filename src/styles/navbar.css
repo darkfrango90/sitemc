@@ -1,0 +1,141 @@
+/* Estilos para ajustar o layout com o menu fixo */
+body {
+  padding-top: 70px; /* Espaço para o menu fixo */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar-spacer {
+  height: 70px;
+}
+
+/* Estilos para suavizar a navegação por âncoras */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste para as âncoras com o menu fixo */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Prevenção de scroll horizontal */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Estilos para o menu mobile */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  .navbar-spacer {
+    height: 70px;
+  }
+  
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* Estilos para melhorar a acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Estilos para focus states (acessibilidade) */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #52c41a;
+  outline-offset: 2px;
+}
+
+/* Melhorias para telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Estilos para garantir que o menu mobile funcione corretamente */
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Animações personalizadas para elementos da navbar */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilos para melhorar a performance */
+.navbar-container {
+  will-change: transform, background-color;
+}
+
+.mobile-menu {
+  will-change: transform;
+}
+
+.mobile-overlay {
+  will-change: opacity;
+}
+
+/* Estilos para garantir compatibilidade com diferentes navegadores */
+.navbar-container {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Estilos para melhorar a legibilidade em diferentes temas */
+@media (prefers-color-scheme: dark) {
+  .navbar-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
