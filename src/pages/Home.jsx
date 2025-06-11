@@ -5,6 +5,7 @@ import Inovacao from '../components/Inovacao/Inovacao';
 import ConstrucaoCivil from '../components/ConstrucaoCivil/ConstrucaoCivil';
 import AreiaFiltrante from '../components/AreiaFiltrante/AreiaFiltrante';
 import Cristais from '../components/Cristais/Cristais';
+import AmbientesCristais from '../components/AmbientesCristais/AmbientesCristais';
 import PorqueEscolher from '../components/PorqueEscolher/PorqueEscolher';
 import Sobre from '../components/Sobre/Sobre';
 import Historia from '../components/Historia/Historia';
@@ -28,6 +29,7 @@ function Home() {
       <ConstrucaoCivil />
       <AreiaFiltrante />
       <Cristais />
+      <AmbientesCristais />
       <PorqueEscolher />
       <Sobre />
       <Historia />
